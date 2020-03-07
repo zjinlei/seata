@@ -43,6 +43,7 @@ import static io.seata.spring.boot.autoconfigure.util.StringFormatUtils.DOT;
 public class SpringBootConfigurationProvider implements ExtConfigurationProvider {
     private static final String INTERCEPT_METHOD_PREFIX = "get";
 
+    //23
     @Override
     public Configuration provide(Configuration originalConfiguration) {
         return (Configuration) Enhancer.create(originalConfiguration.getClass(), new MethodInterceptor() {
